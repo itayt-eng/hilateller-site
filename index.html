@@ -3,12 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hila Teller, LCSW — Psychotherapy in Los Altos, CA. Compassionate, personalized therapy for trauma, anxiety, depression, and life transitions." />
-  <title>Hila Teller, LCSW — Psychotherapy in Los Altos, CA</title>
-  <link rel="stylesheet" href="style.css?v=2" />
+
+  <title>Hila Teller, LCSW | Psychotherapy in Los Altos, CA</title>
+  <meta name="description" content="Compassionate, personalized psychotherapy in Los Altos, CA. Hila Teller, LCSW specializes in trauma, PTSD, anxiety, depression & life transitions. Free 15-min consultation." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://hilateller.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://hilateller.com/" />
+  <meta property="og:site_name"   content="Hila Teller, LCSW" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:title"       content="Hila Teller, LCSW | Psychotherapy in Los Altos, CA" />
+  <meta property="og:description" content="Compassionate, personalized psychotherapy in Los Altos, CA. Specializing in trauma, PTSD, anxiety, depression & life transitions. Free 15-min consultation." />
+  <meta property="og:image"       content="https://hilateller.com/images/hero-beach.jpg" />
+  <meta property="og:image:width"  content="1920" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt"   content="Rocky coastal shoreline — Hila Teller Psychotherapy" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Hila Teller, LCSW | Psychotherapy in Los Altos, CA" />
+  <meta name="twitter:description" content="Compassionate psychotherapy in Los Altos, CA. Trauma, PTSD, anxiety, depression. Free 15-min consultation." />
+  <meta name="twitter:image"       content="https://hilateller.com/images/hero-beach.jpg" />
+
+  <!-- Local geo -->
+  <meta name="geo.region"    content="US-CA" />
+  <meta name="geo.placename" content="Los Altos, California" />
+  <meta name="geo.position"  content="37.3861;-122.1089" />
+  <meta name="ICBM"          content="37.3861, -122.1089" />
+
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="images/hero-beach.webp" type="image/webp" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=3" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "MedicalBusiness"],
+    "@id": "https://hilateller.com/#business",
+    "name": "Hila Teller, LCSW",
+    "description": "Compassionate, personalized psychotherapy in Los Altos, CA. Specializing in trauma, PTSD, CPTSD, anxiety, depression, sexual abuse, and life transitions. Individual adult therapy for ages 18+.",
+    "url": "https://hilateller.com",
+    "telephone": "+14084121517",
+    "email": "hilatellerlcsw@gmail.com",
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Check, Superbill for out-of-network insurance",
+    "image": "https://hilateller.com/images/hero-beach.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "885 North San Antonio Road",
+      "addressLocality": "Los Altos",
+      "addressRegion": "CA",
+      "postalCode": "94022",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.3861,
+      "longitude": -122.1089
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Los Altos"},
+      {"@type": "City", "name": "Mountain View"},
+      {"@type": "City", "name": "Palo Alto"},
+      {"@type": "City", "name": "Sunnyvale"}
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Psychotherapy Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Individual Adult Psychotherapy",
+            "description": "One-on-one therapy for adults 18+ addressing trauma, PTSD, anxiety, depression, and more."
+          },
+          "price": "240",
+          "priceCurrency": "USD"
+        }
+      ]
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Hila Teller",
+      "jobTitle": "Licensed Clinical Social Worker",
+      "honorificSuffix": "LCSW"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -18,10 +112,10 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="nav-links">
-        <li><a href="index.html" class="nav__link active">Home</a></li>
-        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="index.html"    class="nav__link active">Home</a></li>
+        <li><a href="about.html"    class="nav__link">About</a></li>
         <li><a href="services.html" class="nav__link">Services</a></li>
-        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="contact.html"  class="nav__link">Contact</a></li>
         <li><a href="articles.html" class="nav__link">Articles</a></li>
       </ul>
     </div>

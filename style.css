@@ -108,7 +108,13 @@ ul { list-style: none; }
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: url('images/hero-beach.jpg') center 45% / cover no-repeat;
+  background-image: image-set(
+    url('images/hero-beach.webp') type('image/webp'),
+    url('images/hero-beach.jpg')  type('image/jpeg')
+  );
+  background-size: cover;
+  background-position: center 45%;
+  background-repeat: no-repeat;
 }
 .hero__overlay {
   position: absolute;

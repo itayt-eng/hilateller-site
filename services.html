@@ -3,12 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Therapy services offered by Hila Teller, LCSW — individual adult psychotherapy in Los Altos, CA, specializing in trauma, PTSD, anxiety, depression, and more." />
-  <title>Services — Hila Teller, LCSW</title>
-  <link rel="stylesheet" href="style.css?v=2" />
+
+  <title>Therapy Services | Trauma, Anxiety & Depression | Hila Teller, LCSW — Los Altos, CA</title>
+  <meta name="description" content="Individual adult psychotherapy ($240/session) in Los Altos, CA. Superbill provided for out-of-network insurance. Specialties: trauma, PTSD, sexual abuse, anxiety, depression, LGBTQ+." />
+
+  <link rel="canonical" href="https://hilateller.com/services.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://hilateller.com/services.html" />
+  <meta property="og:site_name"   content="Hila Teller, LCSW" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:title"       content="Therapy Services | Trauma, Anxiety & Depression | Hila Teller, LCSW" />
+  <meta property="og:description" content="Individual adult psychotherapy ($240/session) in Los Altos, CA. Specialties: trauma, PTSD, sexual abuse, anxiety, depression, LGBTQ+, life transitions." />
+  <meta property="og:image"       content="https://hilateller.com/images/office-1440.jpg" />
+  <meta property="og:image:width"  content="1084" />
+  <meta property="og:image:height" content="1440" />
+  <meta property="og:image:alt"   content="Comfortable therapy office in Los Altos, CA" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Therapy Services | Hila Teller, LCSW | Los Altos, CA" />
+  <meta name="twitter:description" content="Individual adult psychotherapy in Los Altos, CA. Trauma, PTSD, anxiety, depression, LGBTQ+. $240/session." />
+  <meta name="twitter:image"       content="https://hilateller.com/images/office-1440.jpg" />
+
+  <meta name="geo.region"    content="US-CA" />
+  <meta name="geo.placename" content="Los Altos, California" />
+  <meta name="geo.position"  content="37.3861;-122.1089" />
+  <meta name="ICBM"          content="37.3861, -122.1089" />
+
+  <link rel="stylesheet" href="style.css?v=3" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Individual Adult Psychotherapy",
+    "description": "One-on-one therapy for adults 18+ in Los Altos, CA. Specializing in trauma, PTSD, CPTSD, anxiety, depression, sexual abuse, relationship issues, LGBTQ+, life transitions, and women's issues.",
+    "provider": {
+      "@type": "MedicalBusiness",
+      "@id": "https://hilateller.com/#business",
+      "name": "Hila Teller, LCSW"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Los Altos"},
+      {"@type": "City", "name": "Mountain View"},
+      {"@type": "City", "name": "Palo Alto"},
+      {"@type": "City", "name": "Sunnyvale"}
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "240",
+      "priceCurrency": "USD",
+      "description": "$240 per session. Superbill provided for out-of-network insurance reimbursement."
+    },
+    "serviceType": [
+      "Trauma Therapy", "PTSD Treatment", "Anxiety Therapy", "Depression Therapy",
+      "Sexual Abuse Counseling", "LGBTQ+ Therapy", "Life Transition Counseling",
+      "Postpartum Therapy", "Relationship Counseling"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -18,21 +74,23 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="nav-links">
-        <li><a href="index.html" class="nav__link">Home</a></li>
-        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="about.html"    class="nav__link">About</a></li>
         <li><a href="services.html" class="nav__link active">Services</a></li>
-        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="contact.html"  class="nav__link">Contact</a></li>
         <li><a href="articles.html" class="nav__link">Articles</a></li>
       </ul>
     </div>
   </nav>
 
   <div class="page-hero">
-    <img src="images/office.jpg" alt="Warm, comfortable therapy office with sofa and natural light" />
+    <picture>
+      <source type="image/webp" srcset="images/office.webp" />
+      <img src="images/office-1440.jpg" alt="Comfortable therapy office with sofa and natural light in Los Altos, CA" width="1084" height="1440" fetchpriority="high" />
+    </picture>
   </div>
 
   <main>
-    <!-- Services description -->
     <section class="section">
       <div class="container">
         <h1 class="section__title">Services</h1>
@@ -43,7 +101,6 @@
       </div>
     </section>
 
-    <!-- Expertise -->
     <section class="section section--dark">
       <div class="container">
         <h2 class="section__title">Expertise</h2>
