@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Therapy services offered by Hila Teller, LCSW — individual adult psychotherapy in Los Altos, CA, specializing in trauma, PTSD, anxiety, depression, and more." />
+  <title>Services — Hila Teller, LCSW</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link active">Services</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li><a href="articles.html" class="nav__link">Articles</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <img src="images/office.jpg" alt="Warm, comfortable therapy office with sofa and natural light" />
+  </div>
+
+  <main>
+    <!-- Services description -->
+    <section class="section">
+      <div class="container">
+        <h1 class="section__title">Services</h1>
+        <p>Individual adult (18+) psychotherapy.</p>
+        <p>Fee: $240 per session.</p>
+        <p>I provide a Superbill which can be used for out-of-network insurance reimbursement.</p>
+        <p style="margin-top:1.75rem;"><a href="contact.html" class="btn">Schedule a free consultation</a></p>
+      </div>
+    </section>
+
+    <!-- Expertise -->
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Expertise</h2>
+        <ul class="expertise-list">
+          <li>Relationship Issues</li>
+          <li>Trauma</li>
+          <li>Sexual Abuse</li>
+          <li>PTSD, CPTSD</li>
+          <li>Emotional Disturbance</li>
+          <li>Anxiety</li>
+          <li>Depression</li>
+          <li>Family Conflict</li>
+          <li>LGBTQ+</li>
+          <li>Life Transitions</li>
+          <li>Pregnancy, Prenatal, Postpartum</li>
+          <li>Self Esteem</li>
+          <li>Women's Issues</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <p class="footer__name">Hila Teller</p>
+        <p><a href="mailto:hilatellerlcsw@gmail.com">hilatellerlcsw@gmail.com</a></p>
+        <p>408-412-1517</p>
+      </div>
+      <div class="footer__right">
+        <p>885 North San Antonio Road</p>
+        <p>Los Altos, CA 94022</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        links.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
