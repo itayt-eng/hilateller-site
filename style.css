@@ -66,6 +66,12 @@ ul { list-style: none; }
 .nav__link:hover,
 .nav__link.active { border-bottom-color: var(--text); }
 
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2.75rem;
+}
+
 .nav__toggle {
   display: none;
   background: none;
