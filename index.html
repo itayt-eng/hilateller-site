@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hila Teller — [Your tagline here]" />
+  <title>Hila Teller</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Replace with your preferred Google Font if desired -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="#top">Hila Teller</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <div class="container hero__inner">
+      <!-- Swap the placeholder image for a real photo in images/ -->
+      <div class="hero__image-wrap">
+        <div class="hero__image-placeholder" aria-hidden="true"></div>
+        <!-- Uncomment and update when you have a photo:
+        <img class="hero__image" src="images/hila-portrait.jpg" alt="Hila Teller" />
+        -->
+      </div>
+      <div class="hero__text">
+        <p class="hero__eyebrow">Hello, I'm</p>
+        <h1 class="hero__name">Hila Teller</h1>
+        <!-- Replace with your actual tagline -->
+        <p class="hero__tagline">Your short professional tagline goes right here.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#contact">Get in touch</a>
+          <a class="btn btn--ghost" href="#work">See my work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about">
+    <div class="container section__inner--split">
+      <div class="section__label">About</div>
+      <div class="section__body">
+        <h2 class="section__title">A little about me</h2>
+        <!-- Replace all placeholder paragraphs with your real bio -->
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <!-- Add a link to a CV/resume if relevant -->
+        <!-- <a class="btn btn--ghost" href="images/cv.pdf" target="_blank">Download CV</a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+      <div class="section__label">What I do</div>
+      <h2 class="section__title section__title--center">Services</h2>
+      <!-- Add, remove, or rename these cards to match your actual offerings -->
+      <div class="cards">
+
+        <div class="card">
+          <div class="card__icon" aria-hidden="true">◆</div>
+          <h3 class="card__title">Service One</h3>
+          <p class="card__body">
+            Short description of this service. Replace with the real thing — one or two sentences is enough.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon" aria-hidden="true">◆</div>
+          <h3 class="card__title">Service Two</h3>
+          <p class="card__body">
+            Short description of this service. Replace with the real thing — one or two sentences is enough.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon" aria-hidden="true">◆</div>
+          <h3 class="card__title">Service Three</h3>
+          <p class="card__body">
+            Short description of this service. Replace with the real thing — one or two sentences is enough.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WORK / PORTFOLIO ===================== -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section__label">Portfolio</div>
+      <h2 class="section__title section__title--center">Selected Work</h2>
+      <!-- Add one .work-item per project. Put images in images/ and update src. -->
+      <div class="work-grid">
+
+        <article class="work-item">
+          <div class="work-item__image-wrap">
+            <div class="work-item__placeholder" aria-hidden="true"></div>
+            <!-- <img src="images/project-1.jpg" alt="Project One" /> -->
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Category</span>
+            <h3 class="work-item__title">Project One</h3>
+            <p class="work-item__desc">Brief description of the project and your role in it.</p>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-item__image-wrap">
+            <div class="work-item__placeholder" aria-hidden="true"></div>
+            <!-- <img src="images/project-2.jpg" alt="Project Two" /> -->
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Category</span>
+            <h3 class="work-item__title">Project Two</h3>
+            <p class="work-item__desc">Brief description of the project and your role in it.</p>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-item__image-wrap">
+            <div class="work-item__placeholder" aria-hidden="true"></div>
+            <!-- <img src="images/project-3.jpg" alt="Project Three" /> -->
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Category</span>
+            <h3 class="work-item__title">Project Three</h3>
+            <p class="work-item__desc">Brief description of the project and your role in it.</p>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-item__image-wrap">
+            <div class="work-item__placeholder" aria-hidden="true"></div>
+            <!-- <img src="images/project-4.jpg" alt="Project Four" /> -->
+          </div>
+          <div class="work-item__info">
+            <span class="work-item__tag">Category</span>
+            <h3 class="work-item__title">Project Four</h3>
+            <p class="work-item__desc">Brief description of the project and your role in it.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section section--alt" id="contact">
+    <div class="container section__inner--split">
+      <div class="section__label">Contact</div>
+      <div class="section__body">
+        <h2 class="section__title">Let's talk</h2>
+        <p>
+          Interested in working together? Fill in the form below or reach out directly —
+          I'll get back to you as soon as I can.
+        </p>
+        <!-- Replace the email address below -->
+        <p><a class="link" href="mailto:hello@hilateller.com">hello@hilateller.com</a></p>
+
+        <!-- Simple contact form — wire up via Formspree, Netlify Forms, etc. -->
+        <form class="form" action="#" method="POST">
+          <div class="form__row">
+            <label class="form__label" for="name">Name</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="message">Message</label>
+            <textarea class="form__input form__input--textarea" id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year"></span> Hila Teller. All rights reserved.</p>
+      <!-- Add or remove social links as needed -->
+      <ul class="footer__social">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        <!-- <li><a href="#" aria-label="Twitter">Twitter</a></li> -->
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Auto-update the copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('nav__links--open');
+    });
+
+    // Close mobile nav when a link is clicked
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        links.classList.remove('nav__links--open');
+      });
+    });
+  </script>
+
+</body>
+</html>
