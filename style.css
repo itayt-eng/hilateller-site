@@ -313,7 +313,48 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 /* ============================================================
-   ARTICLES
+   ARTICLE PAGE
+   ============================================================ */
+.article { max-width: 680px; }
+.article h1.section__title { margin-bottom: 2rem; }
+.article h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-weight: 400;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+.article p { margin-bottom: 1rem; }
+.article ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.article ul li { margin-bottom: 0.4rem; }
+.article hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+.article .article-cta {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: var(--off-white);
+  border-left: 3px solid var(--btn-bg);
+}
+.article .article-cta p { margin-bottom: 1rem; }
+.article-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  text-decoration: underline;
+}
+.article-back:hover { color: var(--text); }
+
+/* ============================================================
+   ARTICLES LIST
    ============================================================ */
 .articles-list { margin-top: 2rem; }
 .articles-list a {
