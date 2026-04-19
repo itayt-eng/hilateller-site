@@ -619,6 +619,13 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   text-decoration: underline;
 }
 .article-back:hover { color: var(--text); }
+.article-byline {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e8e4df;
+}
 
 /* ============================================================
    FOOTER
