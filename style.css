@@ -68,8 +68,13 @@ ul { list-style: none; }
 
 .nav__links {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 2.75rem;
+  flex-wrap: nowrap;
+}
+.nav__links > li {
+  flex-shrink: 0;
 }
 
 .nav__toggle {
