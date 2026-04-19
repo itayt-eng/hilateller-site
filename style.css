@@ -357,12 +357,22 @@ textarea.form__input { resize: vertical; min-height: 120px; }
    ARTICLES LIST
    ============================================================ */
 .articles-list { margin-top: 2rem; }
+.articles-group { margin-bottom: 2.5rem; }
+.articles-group__title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #d8d4cf;
+}
 .articles-list a {
   display: block;
   color: #2020cc;
   text-decoration: underline;
   font-size: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
 }
 .articles-list a:hover { color: #0000a0; }
 
