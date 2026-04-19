@@ -3,14 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Hila Teller, LCSW | Psychotherapy in Los Altos, CA</title>
   <meta name="description" content="Compassionate, personalized psychotherapy in Los Altos, CA. Hila Teller, LCSW specializes in trauma, PTSD, anxiety, depression & life transitions. Free 15-min consultation." />
-
-  <!-- Canonical -->
   <link rel="canonical" href="https://hilateller.com/" />
-
-  <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://hilateller.com/" />
   <meta property="og:site_name"   content="Hila Teller, LCSW" />
@@ -21,31 +16,19 @@
   <meta property="og:image:width"  content="1920" />
   <meta property="og:image:height" content="600" />
   <meta property="og:image:alt"   content="Rocky coastal shoreline — Hila Teller Psychotherapy" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Hila Teller, LCSW | Psychotherapy in Los Altos, CA" />
   <meta name="twitter:description" content="Compassionate psychotherapy in Los Altos, CA. Trauma, PTSD, anxiety, depression. Free 15-min consultation." />
   <meta name="twitter:image"       content="https://hilateller.com/images/hero-beach.jpg" />
-
-  <!-- Local geo -->
   <meta name="geo.region"    content="US-CA" />
   <meta name="geo.placename" content="Los Altos, California" />
   <meta name="geo.position"  content="37.3861;-122.1089" />
   <meta name="ICBM"          content="37.3861, -122.1089" />
-
-  <!-- Preload LCP hero image -->
   <link rel="preload" as="image" href="images/hero-beach.webp" type="image/webp" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3" />
-
-  <!-- Fonts -->
+  <link rel="stylesheet" href="style.css?v=4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,8 +40,6 @@
     "telephone": "+14084121517",
     "email": "hilatellerlcsw@gmail.com",
     "priceRange": "$$",
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Check, Superbill for out-of-network insurance",
     "image": "https://hilateller.com/images/hero-beach.jpg",
     "address": {
       "@type": "PostalAddress",
@@ -68,56 +49,35 @@
       "postalCode": "94022",
       "addressCountry": "US"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 37.3861,
-      "longitude": -122.1089
-    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 37.3861, "longitude": -122.1089 },
     "areaServed": [
       {"@type": "City", "name": "Los Altos"},
       {"@type": "City", "name": "Mountain View"},
       {"@type": "City", "name": "Palo Alto"},
       {"@type": "City", "name": "Sunnyvale"}
     ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Psychotherapy Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Individual Adult Psychotherapy",
-            "description": "One-on-one therapy for adults 18+ addressing trauma, PTSD, anxiety, depression, and more."
-          },
-          "price": "240",
-          "priceCurrency": "USD"
-        }
-      ]
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Hila Teller",
-      "jobTitle": "Licensed Clinical Social Worker",
-      "honorificSuffix": "LCSW"
-    }
+    "founder": { "@type": "Person", "name": "Hila Teller", "jobTitle": "Licensed Clinical Social Worker", "honorificSuffix": "LCSW" }
   }
   </script>
 </head>
 <body>
 
   <nav class="nav">
-    <div class="container nav__inner">
-      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">Hila Teller, LCSW</a>
       <ul class="nav__links" id="nav-links">
         <li><a href="index.html"    class="nav__link active">Home</a></li>
         <li><a href="about.html"    class="nav__link">About</a></li>
         <li><a href="services.html" class="nav__link">Services</a></li>
-        <li><a href="contact.html"  class="nav__link">Contact</a></li>
         <li><a href="articles.html" class="nav__link">Articles</a></li>
       </ul>
+      <div class="nav__actions">
+        <a href="tel:+14084121517" class="nav__phone">408-412-1517</a>
+        <a href="contact.html" class="btn--nav">Free Consultation</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -126,42 +86,167 @@
     <div class="hero__overlay"></div>
     <div class="container hero__content">
       <h1 class="hero__name">Hila Teller, LCSW</h1>
-      <p class="hero__tagline">Psychotherapy in Los Altos, CA</p>
+      <p class="hero__tagline">Psychotherapy for Adults in Los Altos, CA</p>
       <p class="hero__quote">
         'Who looks outside, dreams;<br>
-        Who looks inside, awakes' (C. Jung)
+        who looks inside, awakes' — C. Jung
       </p>
-      <a href="contact.html" class="btn">Schedule a free consultation</a>
+      <div class="hero__ctas">
+        <a href="contact.html" class="btn">Schedule a Free Consultation</a>
+        <a href="tel:+14084121517" class="btn--outline-white">Call 408-412-1517</a>
+      </div>
     </div>
   </section>
+
+  <div class="trust-bar">
+    <div class="trust-bar__inner">
+      <span class="trust-item">Licensed Clinical Social Worker</span>
+      <span class="trust-item">Los Altos, California</span>
+      <span class="trust-item">Telehealth Available</span>
+      <span class="trust-item">Free 15-Min Consultation</span>
+      <span class="trust-item">Response Within 24 Hours</span>
+    </div>
+  </div>
 
   <main>
     <section class="section">
       <div class="container">
-        <h2 class="section__title">Hi, I'm Hila,</h2>
-        <p>I am here to help you navigate through life's challenges and provide support for those who have experienced traumatic childhood, sexual and or physical abuse, emotional abuse and neglect, as well as those suffering from depression, anxiety, and going through various life transitions and crises.</p>
-        <p>I believe in the power of connection, the value of introspection, and the insight that can be gained through therapy. Together, we can create a safe and non-judgmental space where we explore your experiences, emotions, and innermost thoughts. Through our therapeutic journey, we will work towards healing, growth, and empowerment.</p>
-        <p>My approach is rooted in the belief that everyone has the ability to heal and transform their lives. By addressing past wounds, understanding patterns, and developing coping strategies, we can empower you to create meaningful change and lead a more fulfilling life.</p>
-        <p>I am dedicated to providing compassionate and personalized therapy, tailored to your unique needs. Together, let's embark on a journey of self-discovery, resilience, and hope.</p>
-        <p>I invite you to take the first step in making a change, and reach out for a consultation. I look forward to supporting you on your path to healing and transformation.</p>
-        <p style="margin-top:1.75rem;">I offer a free 15 minutes phone consultation.</p>
-        <p>Leave me a message and I will get back to you within 24 hours.</p>
-        <p style="margin-top:1.75rem;"><a href="contact.html" class="btn">Contact me</a></p>
+        <div class="intro-grid">
+          <div class="intro-grid__text">
+            <h2 class="section__title">Hi, I'm Hila</h2>
+            <p>I'm a licensed psychotherapist in Los Altos helping adults navigate life's hardest challenges — trauma, loss, transitions, and the quiet suffering that doesn't always have a name.</p>
+            <p>My approach is relational and psychodynamic: we work not just on symptoms, but on understanding the deeper patterns, early experiences, and wounds that shape how you feel and relate to the world today.</p>
+            <p>I believe everyone has the capacity to heal. In our sessions together, we'll create a space that is safe, honest, and genuinely tailored to you.</p>
+            <p>I offer a free 15-minute phone consultation. Reach out and I'll respond within 24 hours.</p>
+            <p style="margin-top:1.5rem;"><a href="contact.html" class="btn">Get in touch</a></p>
+          </div>
+          <aside class="intro-sidebar">
+            <p class="intro-sidebar__title">Areas I specialize in</p>
+            <div class="specialty-chips">
+              <span class="chip">Trauma &amp; PTSD</span>
+              <span class="chip">Complex PTSD</span>
+              <span class="chip">Anxiety</span>
+              <span class="chip">Depression</span>
+              <span class="chip">Sexual Abuse</span>
+              <span class="chip">Childhood Trauma</span>
+              <span class="chip">Life Transitions</span>
+              <span class="chip">Postpartum</span>
+              <span class="chip">Grief &amp; Loss</span>
+              <span class="chip">Low Self-Esteem</span>
+              <span class="chip">LGBTQ+ Affirming</span>
+              <span class="chip">Relationship Patterns</span>
+            </div>
+            <div class="intro-sidebar__cta">
+              <p>Not sure if therapy is right for you? Let's talk — no obligation.</p>
+              <a href="contact.html" class="btn" style="display:block;text-align:center;">Book a Free Call</a>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title" style="text-align:center;">How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Reach Out</h3>
+            <p>Send a message or call. I'll respond within 24 hours to set up your free phone consultation.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Free Consultation</h3>
+            <p>We spend 15 minutes on the phone. Ask questions, share what's going on, and see if we're a good fit — no pressure.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Begin Therapy</h3>
+            <p>If it feels right, we schedule our first session. Therapy is weekly and tailored entirely to you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Articles</h2>
+        <p style="color:var(--text-mid);">Thoughts on therapy, trauma, and mental health — written for the people I work with.</p>
+        <div class="articles-grid">
+          <a href="trauma-therapy.html" class="article-card">
+            <p class="article-card__tag">Trauma</p>
+            <p class="article-card__title">How Do I Know If I Need Trauma Therapy?</p>
+            <span class="article-card__arrow">Read →</span>
+          </a>
+          <a href="what-is-cptsd.html" class="article-card">
+            <p class="article-card__tag">Trauma</p>
+            <p class="article-card__title">What Is Complex PTSD (CPTSD)?</p>
+            <span class="article-card__arrow">Read →</span>
+          </a>
+          <a href="childhood-trauma-relationships.html" class="article-card">
+            <p class="article-card__tag">Trauma</p>
+            <p class="article-card__title">How Childhood Trauma Affects Adult Relationships</p>
+            <span class="article-card__arrow">Read →</span>
+          </a>
+          <a href="high-functioning-depression.html" class="article-card">
+            <p class="article-card__tag">Depression</p>
+            <p class="article-card__title">High-Functioning Depression: When You Look Fine but Feel Empty</p>
+            <span class="article-card__arrow">Read →</span>
+          </a>
+          <a href="anxiety-therapy.html" class="article-card">
+            <p class="article-card__tag">Anxiety</p>
+            <p class="article-card__title">When Worry Takes Over: Understanding Anxiety</p>
+            <span class="article-card__arrow">Read →</span>
+          </a>
+          <a href="articles.html" class="article-card article-card--more">
+            <p>View all 14 articles →</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="container">
+        <h2>Ready to take the first step?</h2>
+        <p>The free consultation is a low-pressure conversation — no commitment required. If it feels like a fit, we'll go from there.</p>
+        <a href="contact.html" class="btn btn--white">Schedule a Free Consultation</a>
+        <p class="cta-band__sub">Or call directly: <a href="tel:+14084121517">408-412-1517</a></p>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__left">
-        <p class="footer__name">Hila Teller</p>
-        <p><a href="mailto:hilatellerlcsw@gmail.com">hilatellerlcsw@gmail.com</a></p>
-        <p>408-412-1517</p>
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__col">
+          <p class="footer__name">Hila Teller, LCSW</p>
+          <p><a href="mailto:hilatellerlcsw@gmail.com">hilatellerlcsw@gmail.com</a></p>
+          <p><a href="tel:+14084121517">408-412-1517</a></p>
+          <p style="margin-top:0.5rem;">885 North San Antonio Road<br>Los Altos, CA 94022</p>
+        </div>
+        <div class="footer__col">
+          <p class="footer__nav-title">Pages</p>
+          <nav class="footer__nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="articles.html">Articles</a>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <p class="footer__nav-title">Articles</p>
+          <nav class="footer__nav">
+            <a href="trauma-therapy.html">Trauma Therapy</a>
+            <a href="what-is-cptsd.html">What Is CPTSD?</a>
+            <a href="anxiety-therapy.html">Anxiety</a>
+            <a href="postpartum-depression.html">Postpartum Depression</a>
+            <a href="lgbtq-therapy.html">LGBTQ+ Affirming</a>
+            <a href="articles.html">All Articles →</a>
+          </nav>
+        </div>
       </div>
-      <div class="footer__right">
-        <p>885 North San Antonio Road</p>
-        <p>Los Altos, CA 94022</p>
-      </div>
+      <p class="footer__copy">© 2026 Hila Teller, LCSW · Los Altos, CA · Licensed Clinical Social Worker</p>
     </div>
   </footer>
 

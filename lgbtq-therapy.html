@@ -12,7 +12,7 @@
   <meta property="og:title" content="LGBTQ+ Affirming Therapy in Los Altos, CA" />
   <meta property="og:description" content="LGBTQ+ affirming therapy in Los Altos, CA — a safe, judgment-free space for your whole self. Hila Teller, LCSW." />
   <meta property="og:image" content="https://hilateller.com/images/hero-beach.jpg" />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -22,15 +22,21 @@
 </head>
 <body>
   <nav class="nav">
-    <div class="container nav__inner">
-      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">Hila Teller, LCSW</a>
       <ul class="nav__links" id="nav-links">
-        <li><a href="index.html" class="nav__link">Home</a></li>
-        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="about.html"    class="nav__link">About</a></li>
         <li><a href="services.html" class="nav__link">Services</a></li>
-        <li><a href="contact.html" class="nav__link">Contact</a></li>
         <li><a href="articles.html" class="nav__link active">Articles</a></li>
       </ul>
+      <div class="nav__actions">
+        <a href="tel:+14084121517" class="nav__phone">408-412-1517</a>
+        <a href="contact.html" class="btn--nav">Free Consultation</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
   <main>
@@ -72,19 +78,53 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__left">
-        <p class="footer__name">Hila Teller</p>
-        <p><a href="mailto:hilatellerlcsw@gmail.com">hilatellerlcsw@gmail.com</a></p>
-        <p><a href="tel:+14084121517">408-412-1517</a></p>
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__col">
+          <p class="footer__name">Hila Teller, LCSW</p>
+          <p><a href="mailto:hilatellerlcsw@gmail.com">hilatellerlcsw@gmail.com</a></p>
+          <p><a href="tel:+14084121517">408-412-1517</a></p>
+          <p style="margin-top:0.5rem;">885 North San Antonio Road<br>Los Altos, CA 94022</p>
+        </div>
+        <div class="footer__col">
+          <p class="footer__nav-title">Pages</p>
+          <nav class="footer__nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="articles.html">Articles</a>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <p class="footer__nav-title">Articles</p>
+          <nav class="footer__nav">
+            <a href="trauma-therapy.html">Trauma Therapy</a>
+            <a href="what-is-cptsd.html">What Is CPTSD?</a>
+            <a href="anxiety-therapy.html">Anxiety</a>
+            <a href="postpartum-depression.html">Postpartum Depression</a>
+            <a href="lgbtq-therapy.html">LGBTQ+ Affirming</a>
+            <a href="articles.html">All Articles →</a>
+          </nav>
+        </div>
       </div>
-      <div class="footer__right"><p>885 North San Antonio Road</p><p>Los Altos, CA 94022</p></div>
+      <p class="footer__copy">© 2026 Hila Teller, LCSW · Los Altos, CA · Licensed Clinical Social Worker</p>
     </div>
   </footer>
   <script>
-    const toggle = document.querySelector('.nav__toggle'); const links = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') === 'true'; toggle.setAttribute('aria-expanded', String(!open)); links.classList.toggle('open'); });
-    links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { toggle.setAttribute('aria-expanded', 'false'); links.classList.remove('open'); }); });
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        links.classList.remove('open');
+      });
+    });
   </script>
 </body>
 </html>
