@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PREVIEW — Hila Teller, LCSW | Psychotherapy in Los Altos, CA</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── NEW TOKENS ─────────────────────────────────────────── */
+    :root {
+      --accent:      #5a8c7a;
+      --accent-dark: #437065;
+      --btn-bg:      #5a8c7a;   /* replaces near-black */
+      --nav-bg:      #f0ede9;   /* lighter, cleaner */
+    }
+
+    /* ── PREVIEW BANNER ─────────────────────────────────────── */
+    .preview-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      z-index: 9999;
+    }
+    .preview-banner strong { color: #f0c96c; }
+
+    /* ── NAV REDESIGN ───────────────────────────────────────── */
+    .nav { background: var(--nav-bg); border-bottom: 1px solid #dedad5; }
+    .nav__inner {
+      justify-content: space-between;
+      max-width: 1080px;
+    }
+    .nav__brand {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--text);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .nav__links { gap: 2rem; }
+    .nav__actions {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      flex-shrink: 0;
+    }
+    .nav__phone {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .nav__phone:hover { text-decoration: underline; }
+    .btn--nav {
+      padding: 0.4rem 0.9rem;
+      background: var(--accent);
+      border-color: var(--accent);
+      border-radius: 5px;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+    .btn--nav:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+
+    /* ── BUTTON ─────────────────────────────────────────────── */
+    .btn {
+      border-radius: 5px;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+    .btn--outline-white {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.75);
+      color: #fff;
+      border-radius: 5px;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      display: inline-block;
+      font-family: var(--sans);
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn--outline-white:hover { background: rgba(255,255,255,0.12); }
+    .btn--white {
+      background: #fff;
+      border: 1px solid #fff;
+      color: var(--accent-dark);
+      border-radius: 5px;
+      font-weight: 700;
+    }
+    .btn--white:hover { background: #f0f0f0; border-color: #f0f0f0; }
+
+    /* ── HERO ────────────────────────────────────────────────── */
+    .hero {
+      min-height: 580px;
+      align-items: center;
+      text-align: center;
+    }
+    .hero__overlay {
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.60) 0%,
+        rgba(0,0,0,0.28) 50%,
+        rgba(0,0,0,0.10) 100%
+      );
+    }
+    .hero__content { padding-bottom: 0; }
+    .hero__name { font-size: clamp(2.2rem, 5vw, 3.4rem); margin-bottom: 0.4rem; }
+    .hero__tagline { margin-bottom: 0.75rem; opacity: 0.9; }
+    .hero__quote {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      max-width: 540px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      opacity: 0.88;
+    }
+    .hero__ctas {
+      display: flex;
+      gap: 0.9rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── TRUST BAR ───────────────────────────────────────────── */
+    .trust-bar {
+      background: var(--off-white);
+      border-bottom: 1px solid #dedad5;
+      padding-block: 0.85rem;
+    }
+    .trust-bar__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: 1.75rem;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: #555;
+    }
+    .trust-item::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ── INTRO SECTION ───────────────────────────────────────── */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .intro-grid__text p { margin-bottom: 1rem; line-height: 1.8; }
+    .intro-sidebar {
+      background: var(--off-white);
+      border-radius: 8px;
+      padding: 1.75rem;
+    }
+    .intro-sidebar__title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .specialty-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .chip {
+      padding: 0.3rem 0.75rem;
+      background: #fff;
+      border: 1px solid #ccc8c2;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      color: var(--text-mid);
+    }
+    .intro-sidebar__cta {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #dedad5;
+    }
+    .intro-sidebar__cta p {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ── HOW IT WORKS ────────────────────────────────────────── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+    }
+    .step { text-align: center; }
+    .step__num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      margin-bottom: 0.9rem;
+    }
+    .step h3 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .step p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+
+    /* ── CTA BAND ────────────────────────────────────────────── */
+    .cta-band {
+      background: var(--accent);
+      color: #fff;
+      padding-block: 3.5rem;
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+    }
+    .cta-band p {
+      font-size: 1rem;
+      opacity: 0.9;
+      max-width: 480px;
+      margin-inline: auto;
+      margin-bottom: 1.75rem;
+    }
+    .cta-band__sub {
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      opacity: 0.75;
+    }
+    .cta-band__sub a { color: #fff; text-decoration: underline; }
+
+    /* ── ARTICLES CARDS ──────────────────────────────────────── */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .article-card {
+      background: #fff;
+      border: 1px solid #e4e0da;
+      border-radius: 8px;
+      padding: 1.25rem 1.35rem;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border-color: #c0bbb5;
+    }
+    .article-card__tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .article-card__title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.45;
+      flex: 1;
+    }
+    .article-card__link {
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-top: 0.75rem;
+      font-weight: 700;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .footer { background: #2a2a2a; }
+    .footer__inner {
+      grid-template-columns: 1fr 1fr 1fr;
+      display: grid;
+      gap: 2rem;
+    }
+    .footer__name { color: #fff; font-size: 1.1rem; }
+    .footer__left p, .footer__right p { color: #aaa; }
+    .footer__left a, .footer__right a { color: #aaa; }
+    .footer__left a:hover, .footer__right a:hover { color: #fff; text-decoration: underline; }
+    .footer__nav-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 0.6rem;
+    }
+    .footer__nav a {
+      display: block;
+      font-size: 0.82rem;
+      color: #aaa;
+      line-height: 2;
+    }
+    .footer__nav a:hover { color: #fff; }
+    .footer__copy {
+      border-top: 1px solid #3a3a3a;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 1.5rem;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 700px) {
+      .nav__brand, .nav__actions { display: none; }
+      .intro-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; gap: 1.5rem; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .footer__inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-banner">
+    ⚠ <strong>PREVIEW ONLY</strong> — This file shows the proposed redesign. Not yet live. Open <strong>index.html</strong> in another tab to compare.
+  </div>
+
+  <!-- ── NAV ─────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__brand">Hila Teller, LCSW</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="about.html"    class="nav__link">About</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="articles.html" class="nav__link">Articles</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="tel:+14084121517" class="nav__phone">408-412-1517</a>
+        <a href="contact.html" class="btn btn--nav">Free Consultation</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero__bg" role="img" aria-label="Rocky coastal shoreline at dusk"></div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h1 class="hero__name">Hila Teller, LCSW</h1>
+      <p class="hero__tagline">Psychotherapy for Adults in Los Altos, CA</p>
+      <p class="hero__quote">
+        'Who looks outside, dreams;<br>
+        Who looks inside, awakes' — C. Jung
+      </p>
+      <div class="hero__ctas">
+        <a href="contact.html" class="btn">Schedule a Free Consultation</a>
+        <a href="tel:+14084121517" class="btn--outline-white">Call 408-412-1517</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST BAR ─────────────────────────────────────────────── -->
+  <div class="trust-bar">
+    <div class="trust-bar__inner">
+      <span class="trust-item">Licensed Clinical Social Worker</span>
+      <span class="trust-item">Los Altos, California</span>
+      <span class="trust-item">Telehealth Available</span>
+      <span class="trust-item">Free 15-Min Phone Consultation</span>
+      <span class="trust-item">Response Within 24 Hours</span>
+    </div>
+  </div>
+
+  <!-- ── INTRO ─────────────────────────────────────────────────── -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-grid__text">
+            <h2 class="section__title">Hi, I'm Hila</h2>
+            <p>I'm a licensed psychotherapist in Los Altos helping adults navigate life's hardest challenges — trauma, loss, transitions, and the quiet suffering that doesn't always have a name.</p>
+            <p>My approach is relational and psychodynamic: we work not just on symptoms, but on understanding the deeper patterns, early experiences, and wounds that shape how you feel and relate to the world today.</p>
+            <p>I believe everyone has the capacity to heal. In our sessions together, we'll create a space that is safe, honest, and genuinely tailored to you — not a script or a checklist.</p>
+            <p>I offer a free 15-minute phone consultation. Reach out and I'll respond within 24 hours.</p>
+            <p style="margin-top:1.5rem;"><a href="contact.html" class="btn">Reach out for a free consultation</a></p>
+          </div>
+          <aside class="intro-sidebar">
+            <p class="intro-sidebar__title">Areas I specialize in</p>
+            <div class="specialty-chips">
+              <span class="chip">Trauma &amp; PTSD</span>
+              <span class="chip">Complex PTSD</span>
+              <span class="chip">Anxiety</span>
+              <span class="chip">Depression</span>
+              <span class="chip">Sexual Abuse</span>
+              <span class="chip">Childhood Trauma</span>
+              <span class="chip">Life Transitions</span>
+              <span class="chip">Postpartum</span>
+              <span class="chip">Grief &amp; Loss</span>
+              <span class="chip">Low Self-Esteem</span>
+              <span class="chip">LGBTQ+ Affirming</span>
+              <span class="chip">Relationship Patterns</span>
+            </div>
+            <div class="intro-sidebar__cta">
+              <p>Not sure if therapy is right for you? Let's talk — no obligation.</p>
+              <a href="contact.html" class="btn" style="width:100%;display:block;text-align:center;">Book a Free Call</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ─────────────────────────────────────────── -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title" style="text-align:center;">How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <h3>Reach Out</h3>
+            <p>Send a message or call. I'll respond within 24 hours to set up your free phone consultation.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <h3>Free Consultation</h3>
+            <p>We spend 15 minutes on the phone. You can ask questions, share what's going on, and get a feel for whether we're a good fit.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <h3>Begin Therapy</h3>
+            <p>If it feels right, we schedule our first session. Therapy is weekly and tailored entirely to you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLES PREVIEW ─────────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Articles</h2>
+        <p style="color:var(--text-mid);margin-bottom:0;">Thoughts on therapy, trauma, and mental health — written for the people I work with.</p>
+        <div class="articles-grid">
+          <a href="trauma-therapy.html" class="article-card">
+            <p class="article-card__tag">Trauma</p>
+            <p class="article-card__title">How Do I Know If I Need Trauma Therapy?</p>
+            <span class="article-card__link">Read →</span>
+          </a>
+          <a href="what-is-cptsd.html" class="article-card">
+            <p class="article-card__tag">Trauma</p>
+            <p class="article-card__title">What Is Complex PTSD (CPTSD)?</p>
+            <span class="article-card__link">Read →</span>
+          </a>
+          <a href="childhood-trauma-relationships.html" class="article-card">
+            <p class="article-card__tag">Trauma</p>
+            <p class="article-card__title">How Childhood Trauma Affects Adult Relationships</p>
+            <span class="article-card__link">Read →</span>
+          </a>
+          <a href="high-functioning-depression.html" class="article-card">
+            <p class="article-card__tag">Depression</p>
+            <p class="article-card__title">High-Functioning Depression: When You Look Fine but Feel Empty</p>
+            <span class="article-card__link">Read →</span>
+          </a>
+          <a href="anxiety-therapy.html" class="article-card">
+            <p class="article-card__tag">Anxiety</p>
+            <p class="article-card__title">When Worry Takes Over: Understanding Anxiety</p>
+            <span class="article-card__link">Read →</span>
+          </a>
+          <a href="articles.html" class="article-card" style="background:var(--off-white);justify-content:center;align-items:center;text-align:center;">
+            <p style="font-family:var(--serif);font-size:1rem;color:var(--text-mid);">View all 14 articles →</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BAND ─────────────────────────────────────────────── -->
+    <div class="cta-band">
+      <div class="container">
+        <h2>Ready to take the first step?</h2>
+        <p>The free consultation is a low-pressure conversation — no commitment required. If it feels like a fit, we'll go from there.</p>
+        <a href="contact.html" class="btn btn--white">Schedule a Free Consultation</a>
+        <p class="cta-band__sub">Or call directly: <a href="tel:+14084121517">408-412-1517</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner" style="padding-top:2.5rem;">
+        <div class="footer__left">
+          <p class="footer__name footer__name--preview">Hila Teller, LCSW</p>
+          <p style="margin-top:0.75rem;"><a href="mailto:hilatellerlcsw@gmail.com">hilatellerlcsw@gmail.com</a></p>
+          <p><a href="tel:+14084121517">408-412-1517</a></p>
+          <p style="margin-top:0.5rem;">885 North San Antonio Road<br>Los Altos, CA 94022</p>
+        </div>
+        <div class="footer__right">
+          <p class="footer__nav-title">Pages</p>
+          <nav class="footer__nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="articles.html">Articles</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__nav-title">Articles</p>
+          <nav class="footer__nav">
+            <a href="trauma-therapy.html">Trauma Therapy</a>
+            <a href="what-is-cptsd.html">What Is CPTSD?</a>
+            <a href="anxiety-therapy.html">Anxiety</a>
+            <a href="postpartum-depression.html">Postpartum Depression</a>
+            <a href="lgbtq-therapy.html">LGBTQ+ Affirming</a>
+            <a href="articles.html">All Articles →</a>
+          </nav>
+        </div>
+      </div>
+      <p class="footer__copy">© 2026 Hila Teller, LCSW · Los Altos, CA · Licensed Clinical Social Worker</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
